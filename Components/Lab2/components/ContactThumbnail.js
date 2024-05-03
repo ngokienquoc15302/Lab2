@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const ContactThumbnail = ({ name, phone, avatar, textColor, onPress }) => {
   const colorStyle = { color: textColor }; // Corrected colorStyle assignment
-  
+
   const ImageComponent = onPress ? TouchableOpacity : View; // Corrected ImageComponent assignment
 
   return (

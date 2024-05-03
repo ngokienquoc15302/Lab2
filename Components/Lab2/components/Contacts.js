@@ -5,7 +5,7 @@ import ContactListItem from './ContactListItem';
 
 const keyExtractor = (item) => item.phone;
 
-const Contacts = ({navigation}) => {
+const Contacts = ({ navigation }) => {
   // State
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -41,18 +41,18 @@ const Contacts = ({navigation}) => {
   //   );
   // };
   const renderContact = ({ item }) => {
-  const { name, avatar, phone } = item;
-  return (
-    <ContactListItem
-      name={name}
-      avatar={avatar}
-      phone={phone}
-      onPress={() => navigation.navigate("Profile", { contact: item })}
-    />
-  );
-};
+    const { name, avatar, phone } = item;
+    return (
+      <ContactListItem
+        name={name}
+        avatar={avatar}
+        phone={phone}
+        onPress={() => navigation.navigate("Profile", { contact: item })}
+      />
+    );
+  };
 
-  
+
   // Render
   return (
     <View style={styles.container}>
@@ -70,11 +70,11 @@ const Contacts = ({navigation}) => {
 }
 
 const styles = StyleSheet.create({
-container: {
+  container: {
     backgroundColor: 'white',
     justifyContent: 'center',
     flex: 1,
-},
+  },
 });
 
 export default Contacts;

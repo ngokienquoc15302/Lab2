@@ -10,7 +10,7 @@ import Routes from './Components/Lab2/components/Routes'
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <Routes/>
+    <Routes />
   );
 }
 const styles = StyleSheet.create({

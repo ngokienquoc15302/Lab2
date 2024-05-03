@@ -3,13 +3,13 @@ import { v4 as uuidv4 } from 'uuid'; // Đổi tên hàm v4 thành uuidv4 để 
 const mapContact = contact => {
     const { name, picture, phone, cell, email } = contact;
     return {
-      id: uuidv4(), // Sử dụng uuidv4() để tạo id ngẫu nhiên
-      name: name.first + " " + name.last,
-      avatar: picture.large,
-      phone,
-      cell,
-      email,
-      favorite: Math.random() >= 0.5, // randomly generate favorite contacts
+        id: uuidv4(), // Sử dụng uuidv4() để tạo id ngẫu nhiên
+        name: name.first + " " + name.last,
+        avatar: picture.large,
+        phone,
+        cell,
+        email,
+        favorite: Math.random() >= 0.5, // randomly generate favorite contacts
     };
 };
 

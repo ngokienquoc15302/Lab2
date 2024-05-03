@@ -50,36 +50,36 @@ const FavoritesScreens = () => {
 
 // Stack Navigator for User Screens
 const UserScreens = ({ navigation }) => {
-    return (
-      <Stack.Navigator initialRouteName="User">
-        <Stack.Screen
-          name='User'
-          component={User}
-          options={{
-            headerTitle: "Me",
-            headerTintColor: 'white',
-            headerStyle: {
-              backgroundColor: colors.blue,
-            },
-            headerRight: () => (
-              <MaterialIcons
-                name="settings"
-                size={24}
-                style={{ color: 'white', marginRight: 10 }}
-                onPress={() => navigation.navigate('Options')}
-              />
-            ),
-          }}
-        />
-        <Stack.Screen
-          name='Options'
-          component={Options}
-          options={{ title: "Options" }}
-        />
-      </Stack.Navigator>
-    );
-  }
-  
+  return (
+    <Stack.Navigator initialRouteName="User">
+      <Stack.Screen
+        name='User'
+        component={User}
+        options={{
+          headerTitle: "Me",
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: colors.blue,
+          },
+          headerRight: () => (
+            <MaterialIcons
+              name="settings"
+              size={24}
+              style={{ color: 'white', marginRight: 10 }}
+              onPress={() => navigation.navigate('Options')}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name='Options'
+        component={Options}
+        options={{ title: "Options" }}
+      />
+    </Stack.Navigator>
+  );
+}
+
 
 // Tab Navigator
 const Tab = createMaterialBottomTabNavigator();
